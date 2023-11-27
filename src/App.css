@@ -1,38 +1,377 @@
-.App {
-  text-align: center;
+/*  Counter Section  */
+
+#counter {    
+    background-color: #ffb400;
+    color: #fff;
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    padding: 100px 0;
+    margin-top: 30px;
+}
+#counter .count {
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    text-align: center;
+}
+.count h4 {
+    color: #fff;
+	font-size: 16px;
+	margin-top: 0;
+}
+#counter .count .fa {
+    font-size: 40px;
+    display: block;
+    color: #fff;
+}
+#counter .number {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+}
+/*  Pricing Section  */
+
+#pricing {
+    background: #f7f7f7;
+}
+.pricing-items {
+    padding-top: 50px;
+}
+.pricing-item {
+    background: #fff;
+    position: relative;
+    box-shadow: 0 0 9px 0 rgba(130, 121, 121, .2);
+    padding: 50px 0px;
+    border-top-right-radius: 2em;
+    border-bottom-left-radius: 2em;
+}
+.pricing-item.active {
+    top: -50px;
+}
+.price-list li {
+    list-style: none;
+    margin-bottom: 15px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.price-list .price {
+    font-size: 30px;
+    font-weight: bold;
+}
+.pricing-item .ribbon {
+    margin: -50px 0 20px;
+    display: block;
+    background-color: #ffb400;
+    padding: 15px 0 2px;
+    opacity: 0.8;
+    border-top-right-radius: 2em;
+}
+.pricing-item:hover .ribbon {
+    background-color: #ffb400;
+	opacity: 1;
+}
+.pricing-item.active .ribbon {
+    background-color: #ffb400;
+	opacity: 1;
+}
+.pricing-item .ribbon p {
+    color: #fff;
+    font-size: 22px;
+    margin: 0 0 10px;
+    font-weight: 600;
+}
+.pricing-item.active .price-list li, .pricing-item:hover .price-list li {
+    color: #848181;;
+}
+ul.price-list {
+    margin-bottom: 30px;
+    padding: 0;
+}
+.btn-price {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 14px 40px;
+    -webkit-border-radius: 26px;
+    -moz-border-radius: 26px;
+    -o-border-radius: 26px;
+    border-radius: 26px;
+    border: 1px solid #848181;
+    background-color: transparent;
+    color: #848181;
+}
+.pricing-item:hover .btn-price,
+.active .btn-price {
+    border: 1px solid #ffb400;
+    background-color: #ffb400;
+    color: #fff;
+}
+.btn-price:focus {
+    background-color: transparent;
+    text-decoration: none;
+}
+@media only screen and (max-width: 767px) {
+    .pricing-items {
+        padding-top: 0;
+    }
+    .pricing-item.active {
+        top: 20px;
+        margin-bottom: 40px;
+    }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#hh{
+    color: #ffffff;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#hh:hover{
+    color: orange;
+   
+}
+.rotate {
+    animation: rotation 1s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
   display: flex;
-  flex-direction: column;
+  background: #ffffff;
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 150px;
+  margin-left: 290px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.content h2 {
+  color: #fff;
+  font-size: 8em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.content h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #f4b403;
+}
+
+.content h2:nth-child(2) {
+  color: #f4b403;
+  animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      16% 44%,
+      33% 50%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
   }
-  to {
-    transform: rotate(360deg);
+
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
   }
+}
+
+
+
+
+.te{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+   
+  
+}
+
+
+
+
+.accordian {
+	width: 600px; height: 320px;
+	overflow: hidden;
+    
+    
+	
+	/*Time for some styling*/
+	margin: 100px auto;
+    margin-top: 190px;
+    margin-right: 0px;
+/* 	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+	-webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+	-moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35); */
+}
+
+/*A small hack to prevent flickering on some browsers*/
+.accordian ul {
+	width: 1200px;
+	/*This will give ample space to the last item to move
+	instead of falling down/flickering during hovers.*/
+}
+
+.accordian li {
+	position: relative;
+	display: block;
+	width: 160px;
+	float: left;
+    
+	
+	border-left: 1px solid #888;
+	
+	box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	
+	/*Transitions to give animation effect*/
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	/*If you hover on the images now you should be able to 
+	see the basic accordian*/
+}
+
+/*Reduce with of un-hovered elements*/
+.accordian ul:hover li {width: 40px;}
+/*Lets apply hover effects now*/
+/*The LI hover style should override the UL hover style*/
+.accordian ul li:hover {width: 640px;}
+
+
+.accordian li img {
+	display: block;
+    width: 600px;
+    height: 400px;
+}
+
+/*Image title styles*/
+ .image_title {
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	left: 0; bottom: 0;	
+width: 640px;	
+
+}
+.image_title a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	padding: 20px;
+	font-size: 16px;
+} 
+
+
+.count{
+   
+  transition: box-shadow .3s;
+ 
+  
+  border-radius: 6px;
+
+}
+.count:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
+
+
+
+
+
+
+
+/* Animation */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 7)); }
+}
+
+/* Styling */
+.slider {
+    background: white;
+    /* box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125); */
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 960px;
+}
+
+.slider::before,
+.slider::after {
+    background: linear-gradient(to right, #ffffff 0%, #ffffff00 100%);
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+}
+
+.slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+
+.slide-track {
+    animation: scroll 40s linear infinite; /* Use the specific animation speed here */
+    display: flex;
+    width: calc(250px * 14);
+}
+
+.slide {
+    height: 100px;
+    width: 250px;
 }
